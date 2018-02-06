@@ -13,3 +13,8 @@ burger_name VARCHAR (100) NOT NULL,
 devoured boolean default false,
 PRIMARY KEY (id)
 );
+
+use burger_db;
+
+select *
+from burgers;
