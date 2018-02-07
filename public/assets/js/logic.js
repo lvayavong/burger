@@ -23,29 +23,7 @@ $(".change-state").on("click", function () {
         },
     });
 });
-//   $(".create-form").on("submit", function(event) {
-//     // Make sure to preventDefault on a submit event.
-//     event.preventDefault();
-
-//     var newBurger = {
-//       name: $("#ca").val().trim(),
-//       devoured: $("[name=devoured]:checked").val().trim()
-//     };
-
-//     // Send the POST request.
-//     $.ajax({ 
-//       method: "POST",
-//         url: "/api/burgers/",
-//         data: { newBurger: insertState },
-//         success: function (response) {
-//             location.href = "/";
-//         },
-//         error: function (error) {
-//             console.log(error);
-
-//         },
-//     });
-//   });
+// Created a post method below but still is unable to insert into database.
 $(".create-form").on("submit", function (event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
@@ -56,7 +34,7 @@ $(".create-form").on("submit", function (event) {
     };
 
     // Send the POST request.
-    $.ajax("/api/burgers" + newBurger, {
+    $.ajax("/api/burgers", {
         type: "POST",
         data: newBurger
     }).then(
